@@ -134,7 +134,7 @@ always@(*) begin
     ysyx_24120011_SPITOPAPB_FLASH_DIV : begin
       if(reg_in_pready) begin
         reg_in_paddr   =  32'h00000014   ;
-        reg_in_pwdata  =  32'h0000000f   ;
+        reg_in_pwdata  =  32'h00000001   ;
         reg_in_pstrb   =  4'hf           ;
         reg_in_pwrite  = 'd0             ;
         reg_in_psel    = 'd0             ;
@@ -143,7 +143,7 @@ always@(*) begin
       end
       else begin
         reg_in_paddr   =  32'h00000014   ;
-        reg_in_pwdata  =  32'h0000000f   ;
+        reg_in_pwdata  =  32'h00000001   ;
         reg_in_pstrb   =  4'hf           ;
         reg_in_pwrite  = 'd1             ;
         reg_in_psel    = 'd1             ;
