@@ -18,7 +18,8 @@ module sdram_top_apb (
   output        sdram_ras,
   output        sdram_cas,
   output        sdram_we,
-  output [12:0] sdram_a,
+  //output [12:0] sdram_a,
+  output [13:0] sdram_a,
   output [ 1:0] sdram_ba,
   //output [ 1:0] sdram_dqm,
   //inout  [15:0] sdram_dq

@@ -32,7 +32,7 @@
 //                          Generated File
 //-----------------------------------------------------------------
 
-module sdram_axi_core_back
+module sdram_axi_core_back16
 (
     // Inputs
      input           clk_i

@@ -32,7 +32,7 @@
 //                          Generated File
 //-----------------------------------------------------------------
 
-module sdram_axi_core
+module sdram_axi_core32
 (
     // Inputs
      input           clk_i
@@ -56,7 +56,7 @@ module sdram_axi_core
     ,output          sdram_cas_o
     ,output          sdram_we_o
     ,output [  3:0]  sdram_dqm_o
-    ,output [ 13:0]  sdram_addr_o
+    ,output [ 12:0]  sdram_addr_o
     ,output [  1:0]  sdram_ba_o
     ,output [ 31:0]  sdram_data_output_o
     ,output          sdram_data_out_en_o
@@ -77,7 +77,7 @@ parameter SDRAM_READ_LATENCY     = 2;
 //-----------------------------------------------------------------
 localparam SDRAM_BANK_W          = 2;
 localparam SDRAM_DQM_W           = 4;
-localparam SDRAM_BANKS           = (2 ** SDRAM_BANK_W) *2;
+localparam SDRAM_BANKS           = 2 ** SDRAM_BANK_W;
 localparam SDRAM_ROW_W           = SDRAM_ADDR_W - SDRAM_COL_W - SDRAM_BANK_W;
 localparam SDRAM_REFRESH_CNT     = 2 ** SDRAM_ROW_W;
 localparam SDRAM_START_DELAY     = 100000 / (1000 / SDRAM_MHZ); // 100uS
@@ -182,8 +182,7 @@ reg  [STATE_W-1:0]     delay_state_q;
 wire [SDRAM_ROW_W-1:0]  addr_col_w  = {{(SDRAM_ROW_W-SDRAM_COL_W){1'b0}}, ram_addr_w[SDRAM_COL_W:2], 1'b0};
 wire [SDRAM_ROW_W-1:0]  addr_row_w  = ram_addr_w[SDRAM_ADDR_W:SDRAM_COL_W+2+1];
 wire [SDRAM_BANK_W-1:0] addr_bank_w = ram_addr_w[SDRAM_COL_W+2:SDRAM_COL_W+2-1];
-// 字扩展
-wire [SDRAM_BANK_W:0] addr_bank_double = {ram_addr_w[26],addr_bank_w};
+
 //-----------------------------------------------------------------
 // SDRAM State Machine
 //-----------------------------------------------------------------
@@ -223,7 +222,7 @@ begin
         else if (ram_req_w)
         begin
             // Open row hit
-            if (row_open_q[addr_bank_double] && addr_row_w == active_row_q[addr_bank_double])
+            if (row_open_q[addr_bank_w] && addr_row_w == active_row_q[addr_bank_w])
             begin
                 if (!ram_rd_w)
                     next_state_r = STATE_WRITE0;
@@ -231,7 +230,7 @@ begin
                     next_state_r = STATE_READ;
             end
             // Row miss, close row, open new row
-            else if (row_open_q[addr_bank_double])
+            else if (row_open_q[addr_bank_w])
             begin
                 next_state_r   = STATE_PRECHARGE;
 
@@ -278,7 +277,7 @@ begin
         if (!refresh_q && ram_req_w && ram_rd_w)
         begin
             // Open row hit
-            if (row_open_q[addr_bank_double] && addr_row_w == active_row_q[addr_bank_double])
+            if (row_open_q[addr_bank_w] && addr_row_w == active_row_q[addr_bank_w])
                 next_state_r = STATE_READ;
         end
     end
@@ -301,7 +300,7 @@ begin
         if (!refresh_q && ram_req_w && (ram_wr_w != 4'b0))
         begin
             // Open row hit
-            if (row_open_q[addr_bank_double] && addr_row_w == active_row_q[addr_bank_double])
+            if (row_open_q[addr_bank_w] && addr_row_w == active_row_q[addr_bank_w])
                 next_state_r = STATE_WRITE0;
         end
     end
@@ -368,7 +367,7 @@ begin
         if (!refresh_q && ram_req_w && ram_rd_w)
         begin
             // Open row hit
-            if (row_open_q[addr_bank_double] && addr_row_w == active_row_q[addr_bank_double])
+            if (row_open_q[addr_bank_w] && addr_row_w == active_row_q[addr_bank_w])
                 delay_r = 4'd0;
         end
     end
@@ -561,8 +560,8 @@ begin
         addr_q        <= addr_row_w;
         bank_q        <= addr_bank_w;
 
-        active_row_q[addr_bank_double]  <= addr_row_w;
-        row_open_q[addr_bank_double]    <= 1'b1;
+        active_row_q[addr_bank_w]  <= addr_row_w;
+        row_open_q[addr_bank_w]    <= 1'b1;
     end
     //-----------------------------------------
     // STATE_PRECHARGE
@@ -584,7 +583,7 @@ begin
             addr_q[ALL_BANKS]   <= 1'b0;
             bank_q              <= addr_bank_w;
 
-            row_open_q[addr_bank_double] <= 1'b0;
+            row_open_q[addr_bank_w] <= 1'b0;
         end
     end
     //-----------------------------------------
@@ -719,8 +718,7 @@ assign sdram_cas_o  = command_q[1];
 assign sdram_we_o   = command_q[0];
 assign sdram_dqm_o  = dqm_q;
 assign sdram_ba_o   = bank_q;
-assign sdram_addr_o[12:0] = addr_q;
-assign sdram_addr_o[13]   = ram_addr_w[26];
+assign sdram_addr_o = addr_q;
 
 //-----------------------------------------------------------------
 // Simulation only
