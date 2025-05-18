@@ -29,7 +29,7 @@ module psram(
   reg [7:0] cmd;        // 命令寄存器
   reg [23:0] addr;      // 地址寄存器
   reg [31:0] data;      // 数据寄存器
-  wire [31:0] rdata;    // 读取数据寄存器
+  reg [31:0] rdata;    // 读取数据寄存器
   reg [7:0] counter;    // 计数器，用于状态控制
   reg [3:0] state;      // 当前状态
 
