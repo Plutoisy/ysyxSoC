@@ -1771,3 +1771,121 @@ org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequ
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.lang.Thread.run(Thread.java:840)
 
+2025.07.30 11:05:19 INFO  Started: Metals version 1.6.0 in folders '/home/plutoisy/ysyx-workbench/ysyxSoC' for client Visual Studio Code 1.98.0.
+2025.07.30 11:05:27 INFO  Shutting down server
+2025.07.30 11:05:27 INFO  shutting down Metals
+2025.07.31 14:03:58 INFO  Started: Metals version 1.6.0 in folders '/home/plutoisy/ysyx-workbench/ysyxSoC' for client Visual Studio Code 1.98.0.
+2025.07.31 14:03:59 INFO  time: initialize in 0.71s
+Jul 31, 2025 2:04:04 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jul 31, 2025 2:04:05 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.07.31 15:19:32 INFO  Shutting down server
+2025.07.31 15:19:32 INFO  shutting down Metals
+2025.07.31 15:19:32 INFO  Exiting server
+2025.07.31 17:01:47 INFO  Started: Metals version 1.6.0 in folders '/home/plutoisy/ysyx-workbench/ysyxSoC' for client Visual Studio Code 1.98.0.
+2025.08.01 11:31:54 INFO  Started: Metals version 1.6.0 in folders '/home/plutoisy/ysyx-workbench/ysyxSoC' for client Visual Studio Code 1.98.0.
+Aug 01, 2025 11:32:01 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.08.01 12:06:49 INFO  Shutting down server
+2025.08.01 12:06:49 INFO  shutting down Metals
+2025.08.01 12:06:49 INFO  Exiting server
+2025.08.02 10:37:08 INFO  Started: Metals version 1.6.1 in folders '/home/plutoisy/ysyx-workbench/ysyxSoC' for client Visual Studio Code 1.98.0.
+2025.08.02 12:14:36 INFO  Shutting down server
+2025.08.02 12:14:36 INFO  shutting down Metals
+2025.08.02 12:14:36 INFO  Exiting server
+2025.08.02 12:14:36 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2025.08.03 23:39:20 INFO  Started: Metals version 1.6.1 in folders '/home/plutoisy/ysyx-workbench/ysyxSoC' for client Visual Studio Code 1.98.0.
+2025.08.06 20:22:37 INFO  Started: Metals version 1.6.1 in folders '/home/plutoisy/ysyx-workbench/ysyxSoC' for client Visual Studio Code 1.98.0.
+2025.08.09 10:59:27 INFO  Started: Metals version 1.6.1 in folders '/home/plutoisy/ysyx-workbench/ysyxSoC' for client Visual Studio Code 1.98.0.
+2025.08.09 10:59:53 INFO  Shutting down server
+2025.08.09 10:59:53 INFO  shutting down Metals
+2025.08.09 10:59:53 INFO  Exiting server
+2025.08.09 10:59:53 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2025.08.09 11:00:05 INFO  Started: Metals version 1.6.1 in folders '/home/plutoisy/ysyx-workbench/ysyxSoC' for client Visual Studio Code 1.98.0.
+2025.08.09 11:00:06 INFO  Shutting down server
+2025.08.09 11:00:06 INFO  shutting down Metals
+2025.08.09 11:00:06 INFO  Exiting server
+2025.08.09 11:00:07 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2025.08.10 16:42:11 INFO  Started: Metals version 1.6.1 in folders '/home/plutoisy/ysyx-workbench/ysyxSoC' for client Visual Studio Code 1.98.0.
+2025.08.10 16:42:16 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:42:22 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:42:22 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+Aug 10, 2025 4:42:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2025.08.10 16:42:22 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:42:22 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:42:22 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+Aug 10, 2025 4:42:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+Aug 10, 2025 4:42:22 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.08.10 16:42:26 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:42:27 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:42:40 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:42:42 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:43:05 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:43:05 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:43:05 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:43:05 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:43:06 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:43:06 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:43:06 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:43:06 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:43:07 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:43:07 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.10 16:43:46 INFO  Shutting down server
+2025.08.10 16:43:46 INFO  shutting down Metals
+2025.08.10 16:43:46 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2025.08.10 16:43:46 INFO  Exiting server
+2025.08.18 15:14:50 INFO  Started: Metals version 1.6.2 in folders '/home/plutoisy/ysyx-workbench/ysyxSoC' for client Visual Studio Code 1.98.0.
+2025.08.18 15:14:50 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.08.18 15:14:55 INFO  no build target found for /home/plutoisy/ysyx-workbench/ysyxSoC/src/device/SDRAM.scala. Using presentation compiler with project's scala-library version: 3.3.6
