@@ -20,9 +20,8 @@ module ps2_top_apb(
   wire ready;
   reg [31:0] reg_in_prdata;
   reg nextdata_n;
-  
   assign in_pready = in_psel & in_penable;
-  assign in_prdata = reg_in_prdata;
+  assign in_prdata = ready ? {24'b0, buffer_out} : 0;
 
   ps2_keyboard u_ps2_keyboard(
       .clk        ( clock      ),
@@ -35,28 +34,25 @@ module ps2_top_apb(
       .overflow   (    )
   );
 
-
+  reg flag;
   always@(posedge clock) begin
     if(reset) begin
-      reg_in_prdata      <= 'b0;
-      nextdata_n         <= 'b1;
+      nextdata_n <= 'b1;
+      flag <= 0;
     end
     else begin
-      if(in_pready & !in_pwrite) begin//读
-        if(in_paddr[3:2] == 2'b00) begin
-          if(ready) begin
-            reg_in_prdata <= {24'b0, buffer_out};
-            nextdata_n <= 1'b0;
-          end
-          else begin
-            reg_in_prdata <= 'b0;
-          end
+      if((in_psel && in_penable) && !in_pwrite && ready) begin//读
+        // $display("%h",buffer_out);
+        flag <= 1;
+        if (flag == 0) begin
+          nextdata_n <= 1'b0;
+        end else begin
+          nextdata_n <= 1'b1;
         end
       end
       else begin
-        if(!nextdata_n) begin
-          nextdata_n <= 1'b1;
-        end
+        flag <= 0;
+        nextdata_n <= 1'b1;
       end
     end
   end
